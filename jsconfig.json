@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        // "@main/*": ["main/*"],
+        // "@renderer/*": ["renderer/*"],
+        // "@lyric/*": ["renderer-lyric/*"],
+        // "@static/*": ["static/*"],
+        "@common/*": ["common/*"],
+      }
+    },
+    "vueCompilerOptions": {
+      "plugins": [
+        "@vue/language-plugin-pug"
+      ]
+    },
+    "exclude": ["node_modules", "build", "dist"]
+  }
+  

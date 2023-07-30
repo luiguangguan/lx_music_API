@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@common/*": ["common/*"],
+    },
+    "typeRoots": [
+      "./types"
+    ],
+  },
+}
