@@ -1,22 +1,27 @@
 {
     // https://github.com/tsconfig/bases#recommended-tsconfigjson
-    "extends": "@tsconfig/recommended/tsconfig.json",
+    // "extends": "@tsconfig/recommended/tsconfig.json",
+    "types": ["node"],
+    "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
     "compilerOptions": {
+    "esModuleInterop": true,
       "target": "ESNext",
       "allowJs": true,
-      "module": "esnext",
+      "module": "commonjs",
       "resolveJsonModule": true,
-      "moduleResolution": "node",
+      "moduleResolution": "nodenext",
+      "inlineSourceMap": true,
       "outDir": "./dist",
-      "baseUrl": "./",                                     /* Specify the base directory to resolve non-relative module names. */
-      // "paths": {                                           /* Specify a set of entries that re-map imports to additional lookup locations. */
-      //   "@common/*": ["common/*"],
+      "baseUrl": "./src",                                     /* Specify the base directory to resolve non-relative module names. */
+      "paths": {                                           /* Specify a set of entries that re-map imports to additional lookup locations. */
+        "@common/*": ["common/*"],
       //   "@renderer/*": ["renderer/*"],
       //   "@main/*": ["main/*"],
       //   // "@lyric/*": ["renderer-lyric/*"],
       //   "@static/*": ["static/*"],
       //   "@/*": ["./*"],
-      // },
+      },
     },
     "vueCompilerOptions": {
       "plugins": [

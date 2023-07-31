@@ -52,42 +52,42 @@ declare namespace LX {
     workAreaSize?: Electron.Size
   }
 
-  interface HotKey {
-    name: string
-    action: string
-    type: keyof typeof keyName
-  }
+  // interface HotKey {
+  //   name: string
+  //   action: string
+  //   type: keyof typeof keyName
+  // }
 
   interface HotKeyDownInfo {
     type: 'local' | 'global'
     key: string
   }
 
-  interface HotKeyConfig {
-    enable: boolean
-    keys: Record<string, HotKey>
-  }
-  interface HotKeyConfigAll {
-    local: HotKeyConfig
-    global: HotKeyConfig
-  }
-  interface RegisterKeyInfo {
-    key: string
-    info: HotKey
-  }
-  type HotKeyState = Map<string, {
-    status: boolean
-    info: HotKey
-  }>
+  // interface HotKeyConfig {
+  //   enable: boolean
+  //   keys: Record<string, HotKey>
+  // }
+  // interface HotKeyConfigAll {
+  //   local: HotKeyConfig
+  //   global: HotKeyConfig
+  // }
+  // interface RegisterKeyInfo {
+  //   key: string
+  //   info: HotKey
+  // }
+  // type HotKeyState = Map<string, {
+  //   status: boolean
+  //   info: HotKey
+  // }>
   interface HotKeyActionWrap<T, D> {
     action: T
     data: D
     source?: string
   }
-  type HotKeyActions = HotKeyActionWrap<'config', HotKeyConfigAll>
-  | HotKeyActionWrap<'enable', boolean>
-  | HotKeyActionWrap<'register', RegisterKeyInfo>
-  | HotKeyActionWrap<'unregister', string>
+  // type HotKeyActions = HotKeyActionWrap<'config', HotKeyConfigAll>
+  // | HotKeyActionWrap<'enable', boolean>
+  // | HotKeyActionWrap<'register', RegisterKeyInfo>
+  // | HotKeyActionWrap<'unregister', string>
 
   interface HotKeyEvent {
     type: string
