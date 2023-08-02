@@ -1,51 +1,47 @@
-"use strict";
+// import { apis } from '../api-source'
+// import leaderboard from './leaderboard'
+// import songList from './songList'
+// import musicSearch from './musicSearch'
+// import pic from './pic'
+// import lyric from './lyric'
+// import hotSearch from './hotSearch'
+// import comment from './comment'
+// import musicInfo from './musicInfo'
+// import { closeVerifyModal } from './util'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-// const { apis } = require('../api-source');
-// const leaderboard = require('./leaderboard');
-// const songList = require('./songList');
-// const musicSearch = require('./musicSearch');
-// const pic = require('./pic');
-// const lyric = require('./lyric');
-// const hotSearch = require('./hotSearch');
-// const comment = require('./comment');
-// const musicInfo = require('./musicInfo');
-// const { closeVerifyModal } = require('./util');
-
-var xm = {
+const xm = {
   // songList,
   // musicSearch,
   // leaderboard,
   // hotSearch,
   // closeVerifyModal,
   comment: {
-    getComment: function getComment() {
-      return Promise.reject(new Error('fail'));
+    getComment() {
+      return Promise.reject(new Error('fail'))
     },
-    getHotComment: function getHotComment() {
-      return Promise.reject(new Error('fail'));
-    }
+    getHotComment() {
+      return Promise.reject(new Error('fail'))
+    },
   },
-  getMusicUrl: function getMusicUrl(songInfo, type) {
+  getMusicUrl(songInfo, type) {
     return {
-      promise: Promise.reject(new Error('fail'))
-    };
+      promise: Promise.reject(new Error('fail')),
+    }
     // return apis('xm').getMusicUrl(songInfo, type)
   },
-  getLyric: function getLyric(songInfo) {
+  getLyric(songInfo) {
     return {
-      promise: Promise.reject(new Error('fail'))
-    };
+      promise: Promise.reject(new Error('fail')),
+    }
     // return lyric.getLyric(songInfo)
   },
-  getPic: function getPic(songInfo) {
-    return Promise.reject(new Error('fail'));
+  getPic(songInfo) {
+    return Promise.reject(new Error('fail'))
     // return pic.getPic(songInfo)
-  } // getMusicDetailPageUrl(songInfo) {
+  },
+  // getMusicDetailPageUrl(songInfo) {
   //   if (songInfo.songStringId) return `https://www.xiami.com/song/${songInfo.songStringId}`
+
   //   musicInfo.getMusicInfo(songInfo).then(({ data }) => {
   //     songInfo.songStringId = data.songStringId
   //   })
@@ -54,6 +50,6 @@ var xm = {
   // init() {
   //   getToken()
   // },
-};
-var _default = xm;
-exports["default"] = _default;
+}
+
+export default xm

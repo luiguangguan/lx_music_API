@@ -1,8 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "moduleResolution":"Node",
-    "module": "esnext",
     "paths": {
       "@common/*": ["common/*"],
     },

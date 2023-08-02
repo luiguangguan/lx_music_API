@@ -1,17 +1,16 @@
-const kw = require('../../renderer/utils/musicSdk/kw/index');; 
-const tx = require('../../renderer/utils/musicSdk/tx/index');; 
-const kg = require('../../renderer/utils/musicSdk/kg/index');; 
-const wy = require('../../renderer/utils/musicSdk/wy/index');; 
-const express = require('express');;
-// const music = require('../utils/musicSdk');
+import kw from '../../renderer/utils/musicSdk/kw/index';
+import tx from '../../renderer/utils/musicSdk/tx/index';
+import kg from '../../renderer/utils/musicSdk/kg/index';
+import wy from '../../renderer/utils/musicSdk/wy/index';
+import express from 'express';
+
 class HomeController {
-    static index(req, res) {
-      // 渲染index.ejs模板，并传递一个变量给模板
-      const { mid, type } = req.query;
-      console.log(tx.musicSearch)
-      res.render('index', { type,mid });
-    }
+  static index(req, res) {
+    // 渲染index.ejs模板，并传递一个变量给模板
+    const { mid, type } = req.query;
+    console.log(tx.musicSearch);
+    res.render('index', { type, mid });
   }
-  
-  module.exports = HomeController;
-  
+}
+
+export default HomeController;

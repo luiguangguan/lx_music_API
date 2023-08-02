@@ -1,13 +1,5 @@
-"use strict";
+const isDev = process.env.NODE_ENV === 'development'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.debugRequest = exports.debugDownload = exports.debug = void 0;
-var isDev = process.env.NODE_ENV === 'development';
-var debug = isDev && true;
-exports.debug = debug;
-var debugRequest = isDev && false;
-exports.debugRequest = debugRequest;
-var debugDownload = isDev && false;
-exports.debugDownload = debugDownload;
+export const debug = isDev && true
+export const debugRequest = isDev && false
+export const debugDownload = isDev && false

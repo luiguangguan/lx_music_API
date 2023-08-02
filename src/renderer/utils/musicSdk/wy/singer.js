@@ -1,27 +1,15 @@
-"use strict";
+import { eapiRequest } from './utils/index'
+import { formatPlayTime, sizeFormate } from '../../index'
+import { formatSingerName } from '../utils'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _require = require('./utils/index'),
-  eapiRequest = _require.eapiRequest;
-var _require2 = require('../index'),
-  formatPlayTime = _require2.formatPlayTime,
-  sizeFormate = _require2.sizeFormate;
-var _require3 = require('../utils'),
-  formatSingerName = _require3.formatSingerName;
-var _default = {
+export default {
   /**
    * 获取歌手信息
    * @param {*} id
    */
-  getInfo: function getInfo(id) {
-    return eapiRequest('/api/artist/head/info/get', {
-      id: id
-    }).then(function (_ref) {
-      var body = _ref.body;
-      if (!body || body.code != 200) throw new Error('get singer info faild.');
+  getInfo(id) {
+    return eapiRequest('/api/artist/head/info/get', { id }).then(({ body }) => {
+      if (!body || body.code != 200) throw new Error('get singer info faild.')
       return {
         source: 'wy',
         id: body.artist.id,
@@ -29,14 +17,14 @@ var _default = {
           name: body.artist.name,
           desc: body.artist.briefDesc,
           avatar: body.user.avatarUrl,
-          gender: body.user.gender === 1 ? 'man' : 'woman'
+          gender: body.user.gender === 1 ? 'man' : 'woman',
         },
         count: {
           music: body.artist.musicSize,
-          album: body.artist.albumSize
-        }
-      };
-    });
+          album: body.artist.albumSize,
+        },
+      }
+    })
   },
   /**
    * 获取歌手歌曲列表
@@ -44,27 +32,24 @@ var _default = {
    * @param {*} page
    * @param {*} limit
    */
-  getSongList: function getSongList(id) {
-    var _this = this;
-    var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-    var limit = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 100;
-    if (page === 1) page = 0;
+  getSongList(id, page = 1, limit = 100) {
+    if (page === 1) page = 0
     return eapiRequest('/api/v2/artist/songs', {
-      id: id,
-      limit: limit,
-      offset: limit * page
-    }).then(function (_ref2) {
-      var body = _ref2.body;
-      if (!body.songs || body.code != 200) throw new Error('get singer song list faild.');
-      var list = _this.filterSongList(body.songs);
+      id,
+      limit,
+      offset: limit * page,
+    }).then(({ body }) => {
+      if (!body.songs || body.code != 200) throw new Error('get singer song list faild.')
+
+      const list = this.filterSongList(body.songs)
       return {
-        list: list,
-        limit: limit,
-        page: page,
+        list,
+        limit,
+        page,
         total: body.total,
-        source: 'wy'
-      };
-    });
+        source: 'wy',
+      }
+    })
   },
   /**
    * 获取歌手专辑列表
@@ -72,31 +57,28 @@ var _default = {
    * @param {*} page
    * @param {*} limit
    */
-  getAlbumList: function getAlbumList(id) {
-    var _this2 = this;
-    var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-    var limit = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 10;
-    if (page === 1) page = 0;
-    return eapiRequest("/api/artist/albums/".concat(id), {
-      limit: limit,
-      offset: limit * page
-    }).then(function (_ref3) {
-      var body = _ref3.body;
-      if (!body.hotAlbums || body.code != 200) throw new Error('get singer album list faild.');
-      var list = _this2.filterAlbumList(body.hotAlbums);
+  getAlbumList(id, page = 1, limit = 10) {
+    if (page === 1) page = 0
+    return eapiRequest(`/api/artist/albums/${id}`, {
+      limit,
+      offset: limit * page,
+    }).then(({ body }) => {
+      if (!body.hotAlbums || body.code != 200) throw new Error('get singer album list faild.')
+
+      const list = this.filterAlbumList(body.hotAlbums)
       return {
         source: 'wy',
-        list: list,
-        limit: limit,
-        page: page,
-        total: body.artist.albumSize
-      };
-    });
+        list,
+        limit,
+        page,
+        total: body.artist.albumSize,
+      }
+    })
   },
-  filterAlbumList: function filterAlbumList(raw) {
-    var list = [];
-    raw.forEach(function (item) {
-      if (!item.id) return;
+  filterAlbumList(raw) {
+    const list = []
+    raw.forEach(item => {
+      if (!item.id) return
       list.push({
         id: item.id,
         count: item.size,
@@ -104,59 +86,49 @@ var _default = {
           name: item.name,
           author: formatSingerName(item.artists),
           img: item.picUrl,
-          desc: null
-        }
-      });
-    });
-    return list;
+          desc: null,
+        },
+      })
+    })
+    return list
   },
-  filterSongList: function filterSongList(raw) {
-    var list = [];
-    raw.forEach(function (item) {
-      if (!item.id) return;
-      var types = [];
-      var _types = {};
-      var size;
-      item.privilege.chargeInfoList.forEach(function (i) {
+  filterSongList(raw) {
+    const list = []
+    raw.forEach(item => {
+      if (!item.id) return
+
+      const types = []
+      const _types = {}
+      let size
+      item.privilege.chargeInfoList.forEach(i => {
         switch (i.rate) {
           case 128000:
-            size = item.lMusic ? sizeFormate(item.lMusic.size) : null;
-            types.push({
-              type: '128k',
-              size: size
-            });
+            size = item.lMusic ? sizeFormate(item.lMusic.size) : null
+            types.push({ type: '128k', size })
             _types['128k'] = {
-              size: size
-            };
+              size,
+            }
           case 320000:
-            size = item.hMusic ? sizeFormate(item.hMusic.size) : null;
-            types.push({
-              type: '320k',
-              size: size
-            });
+            size = item.hMusic ? sizeFormate(item.hMusic.size) : null
+            types.push({ type: '320k', size })
             _types['320k'] = {
-              size: size
-            };
+              size,
+            }
           case 999000:
-            size = item.sqMusic ? sizeFormate(item.sqMusic.size) : null;
-            types.push({
-              type: 'flac',
-              size: size
-            });
+            size = item.sqMusic ? sizeFormate(item.sqMusic.size) : null
+            types.push({ type: 'flac', size })
             _types.flac = {
-              size: size
-            };
+              size,
+            }
           case 1999000:
-            size = item.hrMusic ? sizeFormate(item.hrMusic.size) : null;
-            types.push({
-              type: 'flac24bit',
-              size: size
-            });
+            size = item.hrMusic ? sizeFormate(item.hrMusic.size) : null
+            types.push({ type: 'flac24bit', size })
             _types.flac24bit = {
-              size: size
-            };
+              size,
+            }
         }
-      });
+      })
+
       list.push({
         singer: formatSingerName(item.artists),
         name: item.name,
@@ -168,12 +140,11 @@ var _default = {
         img: null,
         lrc: null,
         otherSource: null,
-        types: types,
-        _types: _types,
-        typeUrl: {}
-      });
-    });
-    return list;
-  }
-};
-exports["default"] = _default;
+        types,
+        _types,
+        typeUrl: {},
+      })
+    })
+    return list
+  },
+}

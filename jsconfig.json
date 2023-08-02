@@ -1,19 +1,32 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-      "paths": {
-        // "@main/*": ["main/*"],
-        // "@renderer/*": ["renderer/*"],
-        // "@lyric/*": ["renderer-lyric/*"],
-        // "@static/*": ["static/*"],
-        "@common/*": ["common/*"],
-      }
-    },
-    "vueCompilerOptions": {
-      "plugins": [
-        "@vue/language-plugin-pug"
+  "compilerOptions": {
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "paths": {
+      // "@main/*": ["main/*"],
+      // "@renderer/*": ["renderer/*"],
+      // "@lyric/*": ["renderer-lyric/*"],
+      // "@static/*": ["static/*"],
+      "*": [
+        "src/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      // "@common/*": ["common/*"],
+      "@MVC/*": [
+        "src/MVC/*"
       ]
-    },
-    "exclude": ["node_modules", "build", "dist"]
-  }
-  
+    }
+  },
+  "vueCompilerOptions": {
+    "plugins": [
+      "@vue/language-plugin-pug"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}

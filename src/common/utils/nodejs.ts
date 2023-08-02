@@ -1,11 +1,8 @@
-// import fs from 'fs'
-// import crypto from 'crypto'
+import fs from 'fs'
+import crypto from 'crypto'
 import { gzip, gunzip } from 'zlib'
-import { log } from '@common/utils'
+// import { log } from '@common/utils'
 import path from 'path'
-import * as fs from 'fs';
-import * as crypto from 'crypto';
-
 
 export const joinPath = (...paths: string[]): string => path.join(...paths)
 
@@ -163,7 +160,7 @@ export const saveStrToFile = async(path: string, str: string | Buffer): Promise<
   await new Promise<void>((resolve, reject) => {
     fs.writeFile(path, str, err => {
       if (err) {
-        log.error(err)
+        // log.error(err)
         reject(err)
         return
       }
