@@ -1,11 +1,11 @@
-import leaderboard from './leaderboard'
-import lyric from './lyric'
-import songList from './songList'
-import musicSearch from './musicSearch'
-import { apis } from '../api-source'
-import hotSearch from './hotSearch'
-import comment from './comment'
-// import tipSearch from './tipSearch'
+import leaderboard from './leaderboard.js'
+import lyric from './lyric.js'
+import songList from './songList.js'
+import musicSearch from './musicSearch.js'
+import { apis } from '../api-source.js'
+import hotSearch from './hotSearch.js'
+import comment from './comment.js'
+// import tipSearch from './tipSearch.js'
 
 const tx = {
   // tipSearch,

@@ -1,5 +1,5 @@
-import { httpFetch } from '../../request'
-import { formatPlayTime, sizeFormate } from '../../index'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, sizeFormate } from '../../index.js'
 
 const getSinger = (singers) => {
   let arr = []

@@ -1,6 +1,6 @@
-import { weapi } from './utils/crypto'
-import { httpFetch } from '../../request'
-import musicDetailApi from './musicDetail'
+import { weapi } from './utils/crypto.js'
+import { httpFetch } from '../../request.js'
+import musicDetailApi from './musicDetail.js'
 
 const topList = [{ id: 'wy__19723756', name: '飙升榜', bangid: '19723756' },
   { id: 'wy__3779629', name: '新歌榜', bangid: '3779629' },

@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { sizeFormate, formatPlayTime } from '../../index'
-import { toMD5, formatSingerName } from '../utils'
+import { httpFetch } from '../../request.js'
+import { sizeFormate, formatPlayTime } from '../../index.js'
+import { toMD5, formatSingerName } from '../utils.js'
 
 export const createSignature = (time, str) => {
   const deviceId = '963B7AA0D21511ED807EE5846EC87D20'

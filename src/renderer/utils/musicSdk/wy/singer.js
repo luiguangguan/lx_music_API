@@ -1,6 +1,6 @@
-import { eapiRequest } from './utils/index'
-import { formatPlayTime, sizeFormate } from '../../index'
-import { formatSingerName } from '../utils'
+import { eapiRequest } from './utils/index.js'
+import { formatPlayTime, sizeFormate } from '../../index.js'
+import { formatSingerName } from '../utils.js'
 
 export default {
   /**

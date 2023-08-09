@@ -1,6 +1,6 @@
 // https://github.com/Binaryify/NeteaseCloudMusicApi/blob/master/module/song_detail.js
-import { httpFetch } from '../../request'
-import { weapi } from './utils/crypto'
+import { httpFetch } from '../../request.js'
+import { weapi } from './utils/crypto.js'
 
 export default songmid => {
   const requestObj = httpFetch('https://music.163.com/weapi/v3/song/detail', {

@@ -1,7 +1,7 @@
-import { httpFetch } from '../../request'
-import { decodeName, formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../index'
-import infSign from './vendors/infSign.min'
-import { signatureParams } from './util'
+import { httpFetch } from '../../request.js'
+import { decodeName, formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../index.js'
+import infSign from './vendors/infSign.min.js'
+import { signatureParams } from './util.js'
 
 const handleSignature = (id, page, limit) => new Promise((resolve, reject) => {
   infSign({ appid: 1058, type: 0, module: 'playlist', page, pagesize: limit, specialid: id }, null, {

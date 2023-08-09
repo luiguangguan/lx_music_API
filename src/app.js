@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname, 'MVC', 'views'));
 app.set('view engine', 'ejs');
 
 // 引入HomeController
-import HomeController from './MVC/controllers/HomeController';
+import HomeController from './MVC/controllers/HomeController.js';
 
 // 设置路由，当访问根目录时，交给HomeController的index方法处理
 app.get('/', HomeController.index);

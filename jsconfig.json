@@ -13,6 +13,9 @@
       "@common/*": [
         "src/common/*"
       ],
+      "@renderer/*": [
+        "src/renderer/*"
+      ],
       // "@common/*": ["common/*"],
       "@MVC/*": [
         "src/MVC/*"

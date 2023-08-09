@@ -1,5 +1,5 @@
-import { httpFetch } from '../../request'
-// import { formatPlayTime } from '../../index'
+import { httpFetch } from '../../request.js'
+// import { formatPlayTime } from '../../index.js'
 
 
 const boardList = [

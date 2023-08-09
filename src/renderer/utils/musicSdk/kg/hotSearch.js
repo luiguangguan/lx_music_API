@@ -1,5 +1,5 @@
-import { httpFetch } from '../../request'
-import { decodeName } from '../../index'
+import { httpFetch } from '../../request.js'
+import { decodeName } from '../../index.js'
 
 export default {
   _requestObj: null,

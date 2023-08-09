@@ -1,8 +1,8 @@
-// import { httpFetch } from '../../request'
-// import { weapi } from './utils/crypto'
-import { sizeFormate, formatPlayTime } from '../../index'
-// import musicDetailApi from './musicDetail'
-import { eapiRequest } from './utils/index'
+// import { httpFetch } from '../../request.js'
+// import { weapi } from './utils/crypto.js'
+import { sizeFormate, formatPlayTime } from '../../index.js'
+// import musicDetailApi from './musicDetail.js'
+import { eapiRequest } from './utils/index.js'
 
 export default {
   limit: 30,

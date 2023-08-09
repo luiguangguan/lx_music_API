@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { decodeLyric, lrcTools } from './util'
-import { decodeName } from '../../index'
+import { httpFetch } from '../../request.js'
+import { decodeLyric, lrcTools } from './util.js'
+import { decodeName } from '../../index.js'
 
 /*
 export default {

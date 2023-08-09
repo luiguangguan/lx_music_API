@@ -1,5 +1,5 @@
-import { decodeName, formatPlayTime, sizeFormate } from '../../index'
-import { createHttpFetch } from './util'
+import { decodeName, formatPlayTime, sizeFormate } from '../../index.js'
+import { createHttpFetch } from './util.js'
 
 const createGetMusicInfosTask = (hashs) => {
   let data = {

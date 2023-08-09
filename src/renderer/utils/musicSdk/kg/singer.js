@@ -1,5 +1,5 @@
-import { getMusicInfosByList } from './musicInfo'
-import { createHttpFetch } from './util'
+import { getMusicInfosByList } from './musicInfo.js'
+import { createHttpFetch } from './util.js'
 
 export default {
   /**

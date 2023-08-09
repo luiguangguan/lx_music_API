@@ -1,4 +1,4 @@
-import { createHttpFetch } from './util'
+import { createHttpFetch } from './util.js'
 
 export default {
   requestObj: null,

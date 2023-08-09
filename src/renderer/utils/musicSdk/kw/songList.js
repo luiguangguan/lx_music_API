@@ -1,7 +1,7 @@
-import { httpFetch } from '../../request'
-import { formatPlayTime, decodeName } from '../../index'
-import { formatSinger, objStr2JSON } from './util'
-import album from './album'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, decodeName } from '../../index.js'
+import { formatSinger, objStr2JSON } from './util.js'
+import album from './album.js'
 
 export default {
   _requestObj_tags: null,

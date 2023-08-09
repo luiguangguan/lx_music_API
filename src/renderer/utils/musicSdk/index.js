@@ -1,11 +1,11 @@
-import kw from './kw/index'
-import kg from './kg/index'
-import tx from './tx/index'
-import wy from './wy/index'
-import mg from './mg/index'
-import bd from './bd/index'
-import xm from './xm'
-import { supportQuality } from './api-source'
+import kw from './kw/index.js'
+import kg from './kg/index.js'
+import tx from './tx/index.js'
+import wy from './wy/index.js'
+import mg from './mg/index.js'
+import bd from './bd/index.js'
+import xm from './xm.js'
+import { supportQuality } from './api-source.js'
 
 
 const sources = {

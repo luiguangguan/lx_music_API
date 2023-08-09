@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { eapi } from './utils/crypto'
-// import { decodeName } from '../..'
+import { httpFetch } from '../../request.js'
+import { eapi } from './utils/crypto.js'
+// import { decodeName } from '../...js'
 
 // const parseLyric = (str, lrc) => {
 //   if (!str) return ''

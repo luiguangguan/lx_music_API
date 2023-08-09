@@ -1,5 +1,5 @@
-import { decodeName } from '../../index'
-import { tokenRequest } from './util'
+import { decodeName } from '../../index.js'
+import { tokenRequest } from './util.js'
 
 export default {
   regExps: {

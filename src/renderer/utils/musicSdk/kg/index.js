@@ -1,12 +1,12 @@
-import leaderboard from './leaderboard'
-import { apis } from '../api-source'
-import songList from './songList'
-import musicSearch from './musicSearch'
-import pic from './pic'
-import lyric from './lyric'
-import hotSearch from './hotSearch'
-import comment from './comment'
-// import tipSearch from './tipSearch'
+import leaderboard from './leaderboard.js'
+import { apis } from '../api-source.js'
+import songList from './songList.js'
+import musicSearch from './musicSearch.js'
+import pic from './pic.js'
+import lyric from './lyric.js'
+import hotSearch from './hotSearch.js'
+import comment from './comment.js'
+// import tipSearch from './tipSearch.js'
 
 const kg = {
   // tipSearch,

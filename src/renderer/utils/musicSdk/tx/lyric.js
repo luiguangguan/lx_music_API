@@ -1,7 +1,7 @@
-import { httpFetch } from '../../request'
-import getMusicInfo from './musicInfo'
-import { rendererInvoke } from '@common/rendererIpc'
-import { WIN_MAIN_RENDERER_EVENT_NAME } from '@common/ipcNames'
+import { httpFetch } from '../../request.js'
+import getMusicInfo from './musicInfo.js'
+import { rendererInvoke } from '@common/rendererIpc.js'
+import { WIN_MAIN_RENDERER_EVENT_NAME } from '@common/ipcNames.js'
 
 const songIdMap = new Map()
 const promises = new Map()

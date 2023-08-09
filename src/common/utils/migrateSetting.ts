@@ -1,4 +1,4 @@
-// import { compareVer } from './index'
+// import { compareVer } from './index.js'
 
 // const oldThemeMap = {
 //   0: 'green',

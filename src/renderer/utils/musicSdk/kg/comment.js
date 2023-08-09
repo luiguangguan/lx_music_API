@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { decodeName, dateFormat2 } from '../../index'
-import { signatureParams } from './util'
+import { httpFetch } from '../../request.js'
+import { decodeName, dateFormat2 } from '../../index.js'
+import { signatureParams } from './util.js'
 
 export default {
   _requestObj: null,

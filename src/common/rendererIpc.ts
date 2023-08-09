@@ -12,13 +12,14 @@
 //   ipcRenderer.sendSync(name, params)
 // }
 
-// export async function rendererInvoke(name: string): Promise<void>
-// export async function rendererInvoke<V>(name: string): Promise<V>
-// export async function rendererInvoke<T>(name: string, params: T): Promise<void>
-// export async function rendererInvoke<T, V>(name: string, params: T): Promise<V>
-// export async function rendererInvoke <T, V>(name: string, params?: T): Promise<V> {
+export async function rendererInvoke(name: string): Promise<void>
+export async function rendererInvoke<V>(name: string): Promise<V>
+export async function rendererInvoke<T>(name: string, params: T): Promise<void>
+export async function rendererInvoke<T, V>(name: string, params: T): Promise<V>
+export async function rendererInvoke <T, V>(name: string, params?: T): Promise<V> {
 //   return await ipcRenderer.invoke(name, params)
-// }
+    return Promise.reject(new Error("This method should not be called."));
+}
 
 // export function rendererOn(name: string, listener: LX.IpcRendererEventListener): void
 // export function rendererOn<T>(name: string, listener: LX.IpcRendererEventListenerParams<T>): void

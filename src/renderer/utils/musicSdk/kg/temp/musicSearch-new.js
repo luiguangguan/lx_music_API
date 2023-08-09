@@ -1,6 +1,6 @@
-import { decodeName, formatPlayTime, sizeFormate } from '../../index'
-import { signatureParams, createHttpFetch } from './util'
-import { formatSingerName } from '../../utils'
+import { decodeName, formatPlayTime, sizeFormate } from '../../index.js'
+import { signatureParams, createHttpFetch } from './util.js'
+import { formatSingerName } from '../../utils.js'
 
 export default {
   limit: 30,

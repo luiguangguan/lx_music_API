@@ -1,10 +1,10 @@
-import leaderboard from './leaderboard'
-import { apis } from '../api-source'
-import musicInfo from './musicInfo'
-import songList from './songList'
-import { httpFetch } from '../../request'
-import musicSearch from './musicSearch'
-import hotSearch from './hotSearch'
+import leaderboard from './leaderboard.js'
+import { apis } from '../api-source.js'
+import musicInfo from './musicInfo.js'
+import songList from './songList.js'
+import { httpFetch } from '../../request.js'
+import musicSearch from './musicSearch.js'
+import hotSearch from './hotSearch.js'
 
 const bd = {
   leaderboard,

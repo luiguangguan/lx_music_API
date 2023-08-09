@@ -1,7 +1,7 @@
-import { httpFetch } from '../../request'
-import { requestMsg } from '../../message'
-import { headers, timeout } from '../options'
-import { dnsLookup } from '../utils'
+import { httpFetch } from '../../request.js'
+import { requestMsg } from '../../message.js'
+import { headers, timeout } from '../options.js'
+import { dnsLookup } from '../utils.js'
 
 const api_messoer = {
   getMusicUrl(songInfo, type) {

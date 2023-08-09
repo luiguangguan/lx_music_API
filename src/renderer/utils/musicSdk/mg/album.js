@@ -1,6 +1,6 @@
-import { createHttpFetch } from './utils'
-import { filterMusicInfoList } from './musicInfo'
-import { formatPlayCount } from '../../index'
+import { createHttpFetch } from './utils.js'
+import { filterMusicInfoList } from './musicInfo.js'
+import { formatPlayCount } from '../../index.js'
 
 export default {
   /**

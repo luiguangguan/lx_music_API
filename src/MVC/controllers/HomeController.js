@@ -1,7 +1,7 @@
-import kw from '../../renderer/utils/musicSdk/kw/index';
-import tx from '../../renderer/utils/musicSdk/tx/index';
-import kg from '../../renderer/utils/musicSdk/kg/index';
-import wy from '../../renderer/utils/musicSdk/wy/index';
+import kw from '../../renderer/utils/musicSdk/kw/index.js';
+import tx from '../../renderer/utils/musicSdk/tx/index.js';
+import kg from '../../renderer/utils/musicSdk/kg/index.js';
+import wy from '../../renderer/utils/musicSdk/wy/index.js';
 import express from 'express';
 
 class HomeController {
@@ -14,3 +14,6 @@ class HomeController {
 }
 
 export default HomeController;
+
+//(\s*import\s+.+from\s+)(['"])(.*/+.*)(['"])([;]*)
+// $1$2$3\.js$4$5

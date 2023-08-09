@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { dateFormat2 } from '../../index'
-import getMusicInfo from './musicInfo'
+import { httpFetch } from '../../request.js'
+import { dateFormat2 } from '../../index.js'
+import getMusicInfo from './musicInfo.js'
 
 const emojis = {
   e400846: '😘',

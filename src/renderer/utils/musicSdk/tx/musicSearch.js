@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { formatPlayTime, sizeFormate } from '../../index'
-import { formatSingerName } from '../utils'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, sizeFormate } from '../../index.js'
+import { formatSingerName } from '../utils.js'
 
 export default {
   limit: 50,

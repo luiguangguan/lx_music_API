@@ -1,4 +1,4 @@
-// import { log } from './utils'
+// import { log } from './utils.js'
 
 const ignoreErrorMessage = [
   'Possible side-effect in debug-evaluate',

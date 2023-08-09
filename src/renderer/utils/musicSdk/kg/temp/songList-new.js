@@ -1,9 +1,9 @@
-import { httpFetch } from '../../../request'
-import { formatSingerName } from '../../utils'
-import { decodeName, formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../../index'
-import { signatureParams, createHttpFetch } from './../util'
-import { getMusicInfosByList } from '../musicInfo'
-import album from '../album'
+import { httpFetch } from '../../../request.js'
+import { formatSingerName } from '../../utils.js'
+import { decodeName, formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../../index.js'
+import { signatureParams, createHttpFetch } from './../util.js'
+import { getMusicInfosByList } from '../musicInfo.js'
+import album from '../album.js'
 
 export default {
   _requestObj_tags: null,

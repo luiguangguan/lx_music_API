@@ -3,12 +3,12 @@
 // https://github.com/Binaryify/NeteaseCloudMusicApi/blob/master/module/top_playlist.js
 // https://github.com/Binaryify/NeteaseCloudMusicApi/blob/master/module/playlist_detail.js
 
-import { weapi, linuxapi } from './utils/crypto'
-import { httpFetch } from '../../request'
-import { formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../index'
-import musicDetailApi from './musicDetail'
-import { eapiRequest } from './utils/index'
-import { formatSingerName } from '../utils'
+import { weapi, linuxapi } from './utils/crypto.js'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, sizeFormate, dateFormat, formatPlayCount } from '../../index.js'
+import musicDetailApi from './musicDetail.js'
+import { eapiRequest } from './utils/index.js'
+import { formatSingerName } from '../utils.js'
 
 export default {
   _requestObj_tags: null,

@@ -1,5 +1,5 @@
-import { httpFetch } from '../../request'
-import getSongId from './songId'
+import { httpFetch } from '../../request.js'
+import getSongId from './songId.js'
 
 export default {
   async getPicUrl(songId, tryNum = 0) {

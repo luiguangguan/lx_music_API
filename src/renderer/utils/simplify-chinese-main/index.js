@@ -1,4 +1,4 @@
-import { simplified, traditional } from './chinese'
+import { simplified, traditional } from './chinese.js'
 
 const stMap = new Map()
 const tsMap = new Map()

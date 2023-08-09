@@ -1,6 +1,6 @@
-import { httpGet, httpFetch } from '../../request'
-import { WIN_MAIN_RENDERER_EVENT_NAME } from '@common/ipcNames'
-import { rendererInvoke } from '@common/rendererIpc'
+import { httpGet, httpFetch } from '../../request.js'
+import { WIN_MAIN_RENDERER_EVENT_NAME } from '@common/ipcNames.js'
+import { rendererInvoke } from '@common/rendererIpc.js'
 
 const kw_token = {
   token: null,

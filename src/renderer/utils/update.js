@@ -1,5 +1,5 @@
-import { httpGet } from './request'
-import { author, name } from '../../../package.json'
+import { httpGet } from './request.js'
+import { author, name } from '../../../package.json.js'
 
 // TODO add Notice
 

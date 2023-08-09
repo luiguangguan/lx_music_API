@@ -1,5 +1,5 @@
-import { httpFetch } from '../../request'
-import { formatPlayTime, toMD5 } from '../../index'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, toMD5 } from '../../index.js'
 import CryptoJS from 'crypto-js'
 
 export default {

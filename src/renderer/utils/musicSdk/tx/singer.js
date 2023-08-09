@@ -1,7 +1,7 @@
-import { httpFetch } from '../../request'
+import { httpFetch } from '../../request.js'
 
-import { formatPlayTime, sizeFormate } from '../../index'
-import { formatSingerName } from '../utils'
+import { formatPlayTime, sizeFormate } from '../../index.js'
+import { formatSingerName } from '../utils.js'
 
 export const filterMusicInfoItem = item => {
   const types = []

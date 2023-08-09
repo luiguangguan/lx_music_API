@@ -1,6 +1,6 @@
-import { sizeFormate } from '../../index'
-import { createHttpFetch } from './utils'
-import { formatSingerName } from '../utils'
+import { sizeFormate } from '../../index.js'
+import { createHttpFetch } from './utils.js'
+import { formatSingerName } from '../utils.js'
 
 const createGetMusicInfosTask = (ids) => {
   let list = ids

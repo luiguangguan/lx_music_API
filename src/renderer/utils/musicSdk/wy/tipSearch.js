@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { weapi } from './utils/crypto'
-import { formatSingerName } from '../utils'
+import { httpFetch } from '../../request.js'
+import { weapi } from './utils/crypto.js'
+import { formatSingerName } from '../utils.js'
 
 export default {
   requestObj: null,

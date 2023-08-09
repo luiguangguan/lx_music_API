@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { weapi } from './utils/crypto'
-import { dateFormat2 } from '../../index'
+import { httpFetch } from '../../request.js'
+import { weapi } from './utils/crypto.js'
+import { dateFormat2 } from '../../index.js'
 
 const emojis = [
   ['大笑', '😃'],

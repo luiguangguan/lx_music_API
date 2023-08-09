@@ -1,7 +1,7 @@
 import fs from 'fs'
 import crypto from 'crypto'
 import { gzip, gunzip } from 'zlib'
-// import { log } from '@common/utils'
+// import { log } from '@common/utils.js'
 import path from 'path'
 
 export const joinPath = (...paths: string[]): string => path.join(...paths)

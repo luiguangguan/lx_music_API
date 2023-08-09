@@ -1,12 +1,11 @@
 {
-  // https://github.com/tsconfig/bases#recommended-tsconfigjson
   "extends": "@tsconfig/recommended/tsconfig.json",
   "types": [
     "node"
   ],
   "include": [
-    "src/**/*.ts",
-    // "src/**/*.js"
+    "src/**/*",
+    "./jsconfig.json"
   ],
   "exclude": [
     "node_modules",
@@ -15,21 +14,20 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "ESNext",
+    "module": "ESNext",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "inlineSourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./src", /* Specify the base directory to resolve non-relative module names. */
-    "paths": { /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "baseUrl": "./src",
+    "paths": {
       "@common/*": [
         "common/*"
       ],
-      //   "@renderer/*": ["renderer/*"],
-      //   "@main/*": ["main/*"],
-      //   // "@lyric/*": ["renderer-lyric/*"],
-      //   "@static/*": ["static/*"],
-      //   "@/*": ["./*"],
-    },
+      "@renderer/*": [
+        "renderer/*"
+      ]
+    }
   }
 }

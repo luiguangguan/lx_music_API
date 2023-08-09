@@ -1,4 +1,4 @@
-import { eapiRequest } from './utils/index'
+import { eapiRequest } from './utils/index.js'
 
 export default {
   _requestObj: null,

@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import { decodeName, formatPlayTime, sizeFormate } from '../../index'
-import { formatSingerName } from '../utils'
+import { httpFetch } from '../../request.js'
+import { decodeName, formatPlayTime, sizeFormate } from '../../index.js'
+import { formatSingerName } from '../utils.js'
 
 
 export default {

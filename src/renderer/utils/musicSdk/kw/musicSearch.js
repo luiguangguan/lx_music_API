@@ -1,9 +1,9 @@
 // import '../../polyfill/array.find'
 
-import { httpFetch } from '../../request'
-import { formatPlayTime, decodeName } from '../../index'
-// import { debug } from '../../utils/env'
-import { formatSinger } from './util'
+import { httpFetch } from '../../request.js'
+import { formatPlayTime, decodeName } from '../../index.js'
+// import { debug } from '../../utils/env.js'
+import { formatSinger } from './util.js'
 
 export default {
   regExps: {

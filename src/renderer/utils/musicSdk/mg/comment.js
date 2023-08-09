@@ -1,6 +1,6 @@
-import { httpFetch } from '../../request'
-import getSongId from './songId'
-import { dateFormat2 } from '../../index'
+import { httpFetch } from '../../request.js'
+import getSongId from './songId.js'
+import { dateFormat2 } from '../../index.js'
 
 export default {
   _requestObj: null,

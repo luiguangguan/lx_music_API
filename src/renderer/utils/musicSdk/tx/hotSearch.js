@@ -1,4 +1,4 @@
-import { httpFetch } from '../../request'
+import { httpFetch } from '../../request.js'
 
 export default {
   _requestObj: null,

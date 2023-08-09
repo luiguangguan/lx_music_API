@@ -1,5 +1,5 @@
-import { httpFetch } from '../../../request'
-import { eapi } from './crypto'
+import { httpFetch } from '../../../request.js'
+import { eapi } from './crypto.js'
 
 export const eapiRequest = (url, data) => {
   return httpFetch('http://interface.music.163.com/eapi/batch', {
